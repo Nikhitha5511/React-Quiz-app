@@ -1,0 +1,127 @@
+
+.quizContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -150px;
+}
+body{
+  margin:0;
+  background-color:rgb(249, 231, 249);
+  
+}
+
+.resultContainer,
+.questionContainer {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  background-color: rgb(247, 215, 247);
+}
+
+.questionContainer{
+  font-size: 18px;
+}
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.option-button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: rgb(185, 127, 185);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color:white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skip-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.skip{
+  width:90px;
+  height:30px;
+  background-color: green;
+  border:none;
+  color:white;
+  font-size: 19px;
+  padding:6px;
+  margin:30px;
+  border-radius: 5px;
+}
+.retake{
+  width:150px;
+  height:30px;
+  background-color: green;
+  border:none;
+  color:white;
+  font-size: 19px;
+  text-align: center;
+  padding:5px;
+  margin:30px;
+  border-radius: 5px;
+
+}
+.score{
+  color:green;
+  font-size: 18px;
+}
+.heading{
+  text-align: center;
+  color:green;
+  animation-name: identifier;
+  animation-timing-function: ease-in;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.leftTime{
+  font-size: 18px;
+  color:rgb(248, 14, 14);
+  font-weight: 400;
+}
+
+@keyframes identifier {
+  to{transform: scaleX(0);}
+  from{transform: scaleX(1);}
+}
+@media (max-width: 768px) {
+  .resultContainer,
+  .questionContainer {
+    font-size: 16px;
+  }
+
+  .options-container {
+    flex-direction: column;
+  }
+
+  .option-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .skip-button,
+  .retake {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .heading{
+    font-size: 13px;
+  }
+}
